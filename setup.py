@@ -13,8 +13,8 @@ def get_requirements(path:str)->List[str]:
             return requirements
 
 setup(
-    name="Student GPA Predictor",
-    version="0.0.1",
+    name="Student Score Predictor",
+    version="0.0.2",
     author="Bilal Saeed",
     author_email="ibilalsaeed@outlook.com",
     packages=find_packages(),
