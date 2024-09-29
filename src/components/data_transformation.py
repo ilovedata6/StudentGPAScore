@@ -49,7 +49,7 @@ class DataTransformation:
                 steps=[
                     ('imputer',SimpleImputer(strategy="most_frequent")),
                     ("encoder",OneHotEncoder()),
-                    ("scaler",StandardScaler())
+                    ("scaler",StandardScaler(with_mean=False))
 ])            
             logging.info("Categorical Columns Transformation Pipeline Created")
             
@@ -102,7 +102,7 @@ class DataTransformation:
             save_object(
                 self.data_transformation_config.preprocessor_obj_path,preprocessor
             )
-            
+            logging.info("successfully saved preprocessing object!")
             return (
                 training_arr,
                 testing_arr,
